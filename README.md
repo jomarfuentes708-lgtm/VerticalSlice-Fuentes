@@ -296,10 +296,9 @@ This project is for educational purposes.
 
 ## Lab Verification Screenshots
 
-![Screenshot 1](docs/screenshots/screenshot-1.png)
-![Screenshot 2](docs/screenshots/screenshot-2.png)
-![Screenshot 3](docs/screenshots/screenshot-3.png)
-![Screenshot 4](docs/screenshots/screenshot-4.png)
-![Screenshot 5A](docs/screenshots/screenshot-5a.png)
-![Screenshot 5B](docs/screenshots/screenshot-5b.png)
-![Screenshot 6](docs/screenshots/screenshot-6.png)
+![Screenshot 1](Api/pogi/Screenshot%202026-09-11%20000750.png)
+![Screenshot 2](Api/pogi/Screenshot%202026-09-11%20001747.png)
+![Screenshot 3](Api/pogi/Screenshot%202026-09-11%20002631.png)
+![Screenshot 4](Api/pogi/Screenshot%202026-09-11%20012628.png)
+![Screenshot 5](Api/pogi/Screenshot%202026-09-11%20095806.png)
+![Screenshot 6](Api/pogi/Screenshot%202026-09-11%20101458.png)
