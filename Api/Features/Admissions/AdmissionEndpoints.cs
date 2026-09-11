@@ -4,6 +4,9 @@ using Api.Common.Extensions;
 using Application.Abstractions.Messaging;
 using Application.Features.Admissions.CreateAdmission;
 using Application.Features.Admissions.GetAdmissionById;
+using Application.Features.Admissions.GetAllAdmissions;
+using Application.Abstractions.Data;
+using Microsoft.EntityFrameworkCore;
 using Domain.Common;
 
 public static class AdmissionEndpoints
@@ -16,6 +19,10 @@ public static class AdmissionEndpoints
         group.MapPost("/", Create)
             .WithName("CreateAdmission")
             .WithSummary("Create a new admission with courses");
+
+        group.MapGet("/", GetAll)
+            .WithName("GetAllAdmissions")
+            .WithSummary("Get all admissions");
 
         group.MapGet("/{id:guid}", GetById)
             .WithName("GetAdmissionById")
@@ -43,5 +50,18 @@ public static class AdmissionEndpoints
         return result.IsSuccess
             ? TypedResults.Ok(result.Value)
             : result.ToProblemDetails();
+    }
+
+    private static async Task<IResult> GetAll(
+        IAppDbContext dbContext,
+        CancellationToken cancellationToken)
+    {
+        var admissions = await dbContext.Admissions
+            .Include(a => a.AdmissionCourses)
+                .ThenInclude(ac => ac.Course)
+            .Include(a => a.Student)
+            .ToListAsync(cancellationToken);
+
+        return Results.Ok(admissions);
     }
 }

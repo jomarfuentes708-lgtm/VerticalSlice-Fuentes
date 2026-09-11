@@ -13,7 +13,7 @@ public sealed class CreateAdmissionCommandHandler(IAppDbContext dbContext)
         CreateAdmissionCommand command,
         CancellationToken cancellationToken = default)
     {
-        var student = await dbContext.Students
+        var student = await dbContext.Students 
             .FirstOrDefaultAsync(s => s.Id == command.StudentId, cancellationToken);
 
         if (student is null)
