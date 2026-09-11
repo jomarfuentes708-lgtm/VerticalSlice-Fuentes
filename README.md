@@ -296,9 +296,9 @@ This project is for educational purposes.
 
 ## Lab Verification Screenshots
 
-![Screenshot 1](Api/Fuentes/1.png)
-![Screenshot 2](Api/Fuentes/2.png)
-![Screenshot 3](Api/Fuentes/3.png)
-![Screenshot 4](Api/Fuentes/4.png)
-![Screenshot 5](Api/Fuentes/5.png)
-![Screenshot 6](Api/Fuentes/6.png)
+![Screenshot 1](Api/gwapo/1.png)
+![Screenshot 2](Api/gwapo/2.png)
+![Screenshot 3](Api/gwapo/3.png)
+![Screenshot 4](Api/gwapo/4.png)
+![Screenshot 5](Api/gwapo/5.png)
+![Screenshot 6](Api/gwapo/6.png)
